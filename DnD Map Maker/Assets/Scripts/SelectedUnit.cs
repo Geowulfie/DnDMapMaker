@@ -227,8 +227,9 @@ public class SelectedUnit : MonoBehaviour {
 	}
 
 	void Delete() {
-		if (Selected) {
-			Destroy (Selected);
+		Debug.Log (SelectOverride);
+		if (SelectOverride) {
+			Destroy (SelectOverride);
 			Floor.transform.position = new Vector3 (5, level*10f, 5);
 		}
 	}
